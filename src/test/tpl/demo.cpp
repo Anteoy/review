@@ -27,6 +27,7 @@ void display(T t)
 
 int main(void)
 {
+    cout << "aaa" << endl;
     display<int>(10);
     display<double>(10.58);
     display<int,double>(11,11.22);
