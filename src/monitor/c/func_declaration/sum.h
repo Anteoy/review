@@ -1,0 +1,1 @@
+int sum(int m, int n);  //也可以写作int sum(int, int);
