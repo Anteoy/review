@@ -1,6 +1,7 @@
 #include <stdio.h>  
 #include <stdlib.h> 
 
+//链表的链式存储
 typedef struct ListNode{
     int data;
     struct ListNode * next;
@@ -10,7 +11,7 @@ typedef struct ListNode{
 LinkList CreatList1(LinkList &L){
     LNode *s;
     int x;
-    //头节点和头指针
+    //头节点即头指针
     L -> next = NULL;
     scanf("%d", &x);
     while(x != 9999) {
@@ -30,7 +31,7 @@ LinkList CreatList2(LinkList &L){
    LinkList L1 = (LinkList)malloc(sizeof(LNode));
    L = L1;
     LNode *s,*r = L; // r为表尾指针 指向表尾
-    //头节点和头指针
+    //头节点即头指针
     L -> next = NULL;
     scanf("%d", &x);
     while(x != 9999) {
@@ -47,10 +48,11 @@ LinkList CreatList2(LinkList &L){
 
 
 int main(){
-    LinkList L = (LinkList)malloc(sizeof(LNode)); 
+    LinkList L = (LinkList)malloc(sizeof(LinkList));
     CreatList2(L);
     while (L){
         printf(" %d",L->data);
         L = L->next;
     }
+    free(L);
 }
