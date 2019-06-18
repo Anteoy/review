@@ -45,9 +45,11 @@ void print(ListQueue listQueue){
 
 int main(){
     //方式1 Enqueue等都需要解除引用用* 且堆上内存需要free
-    ListQueue* listQueue = (ListQueue*)malloc(sizeof(ListQueue));
+//    ListQueue* listQueue = (ListQueue*)malloc(sizeof(ListQueue));
     //方式2 栈上分配内存不需要free 且Enqueue直接传值或者引用
 //    ListQueue listQueue;
+    //方式3 用new delete
+    ListQueue* listQueue = new ListQueue();
     initQueue(*listQueue);
     int empty = isEmpty(*listQueue);
     cout << "is empty res: " << empty << endl;
@@ -63,5 +65,6 @@ int main(){
     DeQueue(*listQueue,e);
     cout << "dequeue e : " << e << endl;
     print(*listQueue);
-    free(listQueue);
+//    free(listQueue);
+    delete listQueue; // or delete(listQueue) ?
 }
