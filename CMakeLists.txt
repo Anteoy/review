@@ -3,4 +3,5 @@ project(review)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(review src/monitor/new_data_structure/list/seqlist.cpp src/monitor/new_data_structure/list/seqlist.h)
+#add_executable(review src/monitor/new_data_structure/list/seqlist.cpp src/monitor/new_data_structure/list/seqlist.h)
+add_executable(review src/monitor/new_data_structure/string/seqString.cpp)
